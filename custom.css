@@ -1,0 +1,19 @@
+.find-matching-consultation, .find-patient-matched {
+    display: none;
+}
+
+.added-item {
+    display: none;
+}
+
+.added-item-2 {
+    display: none;
+}
+
+.reconciliation-invoice {
+    display: none;
+}
+
+.reconciliation-invoice td {
+    border-top: 5px solid #E6E6E6 !important;
+}

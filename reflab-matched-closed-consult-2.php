@@ -21,12 +21,6 @@
         <div class="ui three ordered steps">
             <div class="completed step">
                 <div class="content">
-                    <div class="title">Consultation</div>
-                    <div class="description">Find matching consultation</div>
-                </div>
-            </div>
-            <div class="completed step">
-                <div class="content">
                     <div class="title">Result</div>
                     <div class="description">Reconcile ordered items</div>
                 </div>
@@ -54,32 +48,26 @@
             <tr class="positive">
                 <td>723 Heartworm Antigen by ELISA-Canine</td>
                 <td class="right aligned">
-                    Matched on existing invoice
+                    Matched on closed invoice
                 </td>
             </tr>
             <tr>
                 <td>1449 Liver Chemistries</td>
                 <td class="right aligned">
                     <button class="ui right floated tiny blue labeled icon button add-to-invoice">
-                        <i class="plus icon"></i> add to invoice
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>CBC</td>
-                <td class="right aligned">
-                    <button class="ui right floated tiny blue labeled icon button add-to-invoice-2">
-                        <i class="plus icon"></i> add to invoice
+                        <i class="plus icon"></i> add to reconciliation invoice
                     </button>
                 </td>
             </tr>
             </tbody>
         </table>
+
     </div>
 
     <div class="ui basic segment">
         <h3 class="ui horizontal divider header">Consultation Invoice</h3>
-        <p>This is the current invoice / consultation this result is matched to.</p>
+        <p>This is the <strong>closed</strong> invoice / consultation this result is matched to.
+            This invoice can no longer be adjusted so Neo will create a new reconciliation consultation invoice</p>
         <table class="ui celled compact table">
             <thead>
             <tr>
@@ -141,6 +129,11 @@
                     n/a
                 </td>
             </tr>
+            <tr class="reconciliation-invoice">
+                <td colspan="4">
+                    <strong>Reconciliation Invoice</strong>
+                </td>
+            </tr>
             <tr class="added-item">
                 <td>
                     <div class="ui ribbon green label">New</div>
@@ -148,19 +141,6 @@
                 </td>
                 <td>1</td>
                 <td>$99.00</td>
-                <td class="right aligned">
-                    <button class="ui right floated tiny negative labeled icon button">
-                        <i class="remove icon"></i> remove
-                    </button>
-                </td>
-            </tr>
-            <tr class="added-item-2">
-                <td>
-                    <div class="ui ribbon green label">New</div>
-                    CBC
-                </td>
-                <td>1</td>
-                <td>$59.00</td>
                 <td class="right aligned">
                     <button class="ui right floated tiny negative labeled icon button">
                         <i class="remove icon"></i> remove

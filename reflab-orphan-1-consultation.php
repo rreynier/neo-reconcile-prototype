@@ -9,8 +9,10 @@
     <!-- Site Properities -->
     <title>Responsive Elements - Semantic</title>
     <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="/custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="/semantic/dist/semantic.min.js"></script>
+    <script src="/custom.js"></script>
 
     <style>
         .title {
@@ -45,9 +47,123 @@
     </div>
 
     <div class="ui basic segment">
-        <h3 class="ui horizontal divider header">Find matching consultation</h3>
-        <p>The contents of this page will be a simple search patient -> search consultation wizard.</p>
+        <h3 class="ui horizontal divider header">Result Details</h3>
+        <div class="ui two column very relaxed grid">
+            <div class="column">
+                <table class="ui definition table">
+                    <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Bruce</td>
+                    </tr>
+                    <tr>
+                        <td>Client</td>
+                        <td>Roeland Reyniers</td>
+                    </tr>
+                    <tr>
+                        <td>Breed</td>
+                        <td>Maltese X</td>
+                    </tr>
+                    <tr>
+                        <td>Sex</td>
+                        <td>Female</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="column">
+                <table class="ui definition table">
+                    <tbody>
+                    <tr>
+                        <td>Assays</td>
+                        <td>
+                            <a class="popup">14 assays</a>
+                            <div class="ui popup">
+                                <p><strong>Hematology (6):</strong><br />
+                                    RBC, Hematocrit, Hemoglobin, MCV, MCH, RDW
+                                </p>
+                                <p>
+                                    <strong>Chemistry (8):</strong><br />
+                                    Glucose, BUN, Creatine, SDMA, Total Protein, Albumin, Globulin, ALT, ALP
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Requisition Id</td>
+                        <td>408144</td>
+                    </tr>
+                    <tr>
+                        <td>Accession Ids</td>
+                        <td>I92838, I182378</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
+    <div class="ui basic segment find-patient">
+        <h3 class="ui horizontal divider header">1. Find matching patient</h3>
+        <div class="ui search">
+            <div class="ui fluid icon input">
+                <input class="prompt" type="text" placeholder="Search for patient..." value="Bruce">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+
+        <table class="ui celled compact table">
+            <thead>
+            <tr>
+                <th>Client</th>
+                <th>Patient</th>
+                <th>Last Visit</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>John Smith</td>
+                <td>Bruce</td>
+                <td>28 April, 2015</td>
+                <td>
+                    <a href="#" class="ui right floated small positive labeled icon button select-patient">
+                        <i class="right check circle icon"></i> Select
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Brucel Smith</td>
+                <td>Fluffy</td>
+                <td>15 January, 2015</td>
+                <td>
+                    <a href="#" class="ui right floated small positive labeled icon button select-patient">
+                        <i class="right check circle icon"></i> Select
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>John Bruce</td>
+                <td>Bobbie</td>
+                <td>1 December, 2015</td>
+                <td>
+                    <a href="#" class="ui right floated small positive labeled icon button select-patient">
+                        <i class="right check circle icon"></i> Select
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ui basic segment find-patient-matched">
+        <h3 class="ui horizontal divider header">1. Find matching patient</h3>
+        <p style="text-align:center;"><strong>Bruce / Roeland Reyniers</strong> selected.  <a href="#">Search again?</a></p>
+    </div>
+
+    <div class="ui basic segment find-matching-consultation">
+        <h3 class="ui horizontal divider header">2. Find matching consultation</h3>
         <div class="ui styled fluid accordion">
             <div class="title">
                 <i class="dropdown icon"></i>
@@ -162,12 +278,7 @@
                 <p class="transition hidden">Details of the consultation</p>
             </div>
         </div>
-
-
-
     </div>
-
-
 </div>
 <script>
     $('.ui.accordion').accordion();

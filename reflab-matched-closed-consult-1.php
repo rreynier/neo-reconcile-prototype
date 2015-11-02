@@ -18,13 +18,7 @@
 
 <div class="ui container">
     <div class="ui basic segment">
-        <div class="ui three ordered steps">
-            <div class="completed step">
-                <div class="content">
-                    <div class="title">Consultation</div>
-                    <div class="description">Find matching consultation</div>
-                </div>
-            </div>
+        <div class="ui two ordered steps">
             <div class="active step">
                 <div class="content">
                     <div class="title">Result</div>
@@ -75,7 +69,7 @@
                             <a class="popup">14 assays</a>
                             <div class="ui popup">
                                 <p><strong>Hematology (6):</strong><br />
-                                RBC, Hematocrit, Hemoglobin, MCV, MCH, RDW
+                                    RBC, Hematocrit, Hemoglobin, MCV, MCH, RDW
                                 </p>
                                 <p>
                                     <strong>Chemistry (8):</strong><br />
@@ -101,7 +95,7 @@
     <div class="ui basic segment">
         <h3 class="ui horizontal divider header">Ordered Items</h3>
         <p>Please confirm the items that were ordered as part of this result set.  If the item is not listed please add it.</p>
-        <table class="ui celled compact table">
+        <table class="ui celled table">
             <thead>
             <tr>
                 <th>Item</th>
@@ -141,10 +135,7 @@
     </div>
 
     <div class="ui basic segment">
-        <a href="reflab-orphan-1-consultation.php" class="ui left floated labeled icon button">
-            <i class="arrow circle left icon"></i> Back
-        </a>
-        <a href="reflab-orphan-3-invoice.php" class="ui right floated labeled positive icon button">
+        <a href="reflab-matched-closed-consult-2.php" class="ui right floated labeled positive icon button">
             <i class="right check circle icon"></i>
             Accept Changes
         </a>
